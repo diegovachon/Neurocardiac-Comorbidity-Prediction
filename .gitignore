@@ -1,0 +1,44 @@
+data/raw/
+data/processed_data/
+data/private/
+*.csv
+*.gz
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# Virtual Environment
+venv/
+env/
+.venv/
+.env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large model files
+models/*.h5
+models/*.pkl
+results/large_files/
+
+# Keep only small synthetic/demo data
+!data/synthetic/
+!data/demo/
