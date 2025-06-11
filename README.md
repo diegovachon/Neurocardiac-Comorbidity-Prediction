@@ -1,8 +1,10 @@
 Neurocardiac Comorbidity Prediction
 
 Project Overview
+
 This project develops an innovative early detection system for identifying patients at risk of developing simultaneous cardiovascular and neurodegenerative diseases through analysis of blood transcriptomic signatures. By examining gene expression patterns in peripheral blood samples, we aim to predict the likelihood of developing conditions such as stroke combined with Alzheimer's disease, enabling preventive interventions before clinical symptoms manifest.
 The approach leverages the growing understanding that cardiovascular and neurodegenerative diseases share common pathological pathways, including inflammation, oxidative stress, and vascular dysfunction. These shared mechanisms leave detectable signatures in blood transcriptomes that can be captured through RNA sequencing and analyzed using machine learning techniques.
+
 Scientific Rationale
 Neurocardiac comorbidities represent a significant clinical challenge, as patients who develop both cardiovascular and neurodegenerative conditions face dramatically worse outcomes than those with isolated diseases. Traditional diagnostic approaches rely on clinical symptoms and imaging findings that appear relatively late in disease progression. By contrast, transcriptomic signatures can reveal molecular changes occurring years before symptom onset.
 Our multi-label classification approach recognizes that these diseases rarely occur in isolation and that their co-occurrence is not merely coincidental but reflects shared underlying biology. This systems-level perspective allows us to develop more sophisticated risk prediction models than traditional single-disease approaches.
@@ -23,12 +25,7 @@ Visualization components in src/visualization/ generate publication-quality figu
 Utility functions in src/utils/ provide common functionality used across multiple modules. Data loading utilities handle various file formats and implement caching for improved performance. Model evaluation functions compute standard metrics and provide statistical significance testing.
 The notebooks/ directory contains Jupyter notebooks that demonstrate the complete analysis workflow. These notebooks serve both as tutorials for new users and as reproducible analysis scripts for specific studies.
 Technology Stack
-Core Dependencies
-The project is built primarily in Python 3.8+, leveraging the rich ecosystem of scientific computing and machine learning libraries. Pandas and NumPy provide efficient data structures and numerical operations for handling large genomic datasets. Scikit-learn implements standard machine learning algorithms with consistent APIs, while TensorFlow and PyTorch enable deep learning model development for complex pattern recognition tasks.
-Bioinformatics-specific libraries include Scanpy for single-cell RNA analysis, DESeq2 (via rpy2) for differential expression analysis, and Bioconductor packages for pathway analysis and gene annotation.
-Visualization and Deployment
-Seaborn and Matplotlib create static visualizations, while Plotly enables interactive plots for data exploration. The dashboard component uses Streamlit or Dash for web-based interfaces that allow researchers to explore results without programming knowledge.
-Docker containerization ensures reproducible deployments across different computing environments, from local development machines to high-performance computing clusters.
+
 Installation
 Prerequisites
 
