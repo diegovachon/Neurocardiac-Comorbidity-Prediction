@@ -6,10 +6,14 @@ This project develops an innovative early detection system for identifying patie
 The approach leverages the growing understanding that cardiovascular and neurodegenerative diseases share common pathological pathways, including inflammation, oxidative stress, and vascular dysfunction. These shared mechanisms leave detectable signatures in blood transcriptomes that can be captured through RNA sequencing and analyzed using machine learning techniques.
 
 Scientific Rationale
+
 Neurocardiac comorbidities represent a significant clinical challenge, as patients who develop both cardiovascular and neurodegenerative conditions face dramatically worse outcomes than those with isolated diseases. Traditional diagnostic approaches rely on clinical symptoms and imaging findings that appear relatively late in disease progression. By contrast, transcriptomic signatures can reveal molecular changes occurring years before symptom onset.
 Our multi-label classification approach recognizes that these diseases rarely occur in isolation and that their co-occurrence is not merely coincidental but reflects shared underlying biology. This systems-level perspective allows us to develop more sophisticated risk prediction models than traditional single-disease approaches.
+
 Technical Architecture
+
 Data Processing Pipeline
+
 The analysis pipeline begins with RNA sequencing data preprocessing, which includes several critical quality control steps. Raw sequencing reads undergo alignment to the human reference genome, followed by gene expression quantification and normalization to account for technical variations between samples. Batch correction algorithms remove systematic biases introduced during library preparation and sequencing, ensuring that biological signals are not confounded by technical artifacts.
 Patient clustering analysis identifies subgroups with similar transcriptomic profiles, revealing potential disease subtypes or stages of progression. This unsupervised learning step helps understand the heterogeneity within patient populations and can inform stratified treatment approaches.
 Machine Learning Framework
@@ -17,7 +21,9 @@ The core prediction engine employs multi-label classification algorithms that si
 Feature selection algorithms identify the most informative genes and pathways for prediction while avoiding overfitting in high-dimensional genomic data. These methods include both statistical approaches (such as differential expression analysis) and machine learning-based techniques (such as recursive feature elimination).
 Multimodal Integration
 When brain imaging data is available, the system integrates transcriptomic and neuroimaging information through multimodal learning approaches. This fusion leverages complementary information sources: transcriptomics reveals molecular mechanisms while neuroimaging captures structural and functional brain changes. The integration is achieved through attention mechanisms that learn optimal ways to combine information from different data modalities.
+
 Repository Structure
+
 The codebase is organized into logical modules that separate concerns and facilitate collaboration:
 The src/preprocessing/ directory contains all data preprocessing functionality. The rna_seq_pipeline.py module handles the complete RNA-seq processing workflow, from raw count normalization to batch correction. Quality control metrics are computed in quality_control.py, which generates comprehensive reports on sample quality, sequencing depth, and potential confounding factors. Patient clustering analysis is implemented in clustering.py, which provides multiple clustering algorithms and visualization tools.
 Machine learning models are implemented in the src/models/ directory. The multi_label_classifier.py module contains various classification algorithms optimized for multi-label prediction, including support vector machines, random forests, and deep neural networks. Multimodal fusion is handled by multimodal_fusion.py, which implements attention-based and late fusion approaches for combining transcriptomic and imaging data. Feature selection methods are centralized in feature_selection.py, providing both univariate and multivariate selection techniques.
