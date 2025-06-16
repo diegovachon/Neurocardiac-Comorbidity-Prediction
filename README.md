@@ -2,13 +2,13 @@ Neurocardiac Comorbidity Prediction
 
 Project Overview
 
-This project develops an innovative early detection system for identifying patients at risk of developing simultaneous cardiovascular and neurodegenerative diseases through analysis of blood transcriptomic signatures. By examining gene expression patterns in peripheral blood samples, we aim to predict the likelihood of developing conditions such as stroke combined with Alzheimer's disease, enabling preventive interventions before clinical symptoms manifest.
+This project develops an innovative early detection system for identifying patients at risk of developing simultaneous cardiovascular and neurodegenerative diseases through analysis of blood transcriptomic signatures. By examining gene expression patterns in peripheral blood samples, this project aims to predict the likelihood of developing conditions such as stroke combined with Alzheimer's disease, enabling preventive interventions before clinical symptoms manifest.
 The approach leverages the growing understanding that cardiovascular and neurodegenerative diseases share common pathological pathways, including inflammation, oxidative stress, and vascular dysfunction. These shared mechanisms leave detectable signatures in blood transcriptomes that can be captured through RNA sequencing and analyzed using machine learning techniques.
 
 Scientific Rationale
 
 Neurocardiac comorbidities represent a significant clinical challenge, as patients who develop both cardiovascular and neurodegenerative conditions face dramatically worse outcomes than those with isolated diseases. Traditional diagnostic approaches rely on clinical symptoms and imaging findings that appear relatively late in disease progression. By contrast, transcriptomic signatures can reveal molecular changes occurring years before symptom onset.
-Our multi-label classification approach recognizes that these diseases rarely occur in isolation and that their co-occurrence is not merely coincidental but reflects shared underlying biology. This systems-level perspective allows us to develop more sophisticated risk prediction models than traditional single-disease approaches.
+My multi-label classification approach recognizes that these diseases rarely occur in isolation and that their co-occurrence is not merely coincidental but reflects shared underlying biology. This systems-level perspective allows us to develop more sophisticated risk prediction models than traditional single-disease approaches.
 
 Technical Architecture
 
