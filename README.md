@@ -29,8 +29,6 @@ Repository Structure
 neurocardiac-comorbidity-prediction/
 ├── README.md                 # This file
 ├── requirements.txt          # Python dependencies
-├── environment.yml           # Conda environment
-├── Dockerfile               # Container setup
 ├── data/
 │   ├── raw/                 # Original datasets (not tracked)
 │   ├── processed/           # Cleaned datasets

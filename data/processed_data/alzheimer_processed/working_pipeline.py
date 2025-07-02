@@ -1,5 +1,5 @@
 """
-ALZHEIMER PREPROCESSING PIPELINE
+Alzheimer preprocessing data
 It handles metadata-only files (GSE125050, GSE67333), multiple platforms from GSE84422 (GPL570, GPL96, GPL97)
 """
 import pandas as pd
@@ -59,9 +59,9 @@ class AlzheimerPreprocessor:
 
     def detect_files(self, data_directory):
         """
-        Detect files based on your actual file structure
+        Detect files based on the actual file structure
         """
-        print("\n DETECTING FILES IN YOUR DATA STRUCTURE")
+        print("\n DETECTING FILES IN DATA STRUCTURE")
         
         data_dir = Path(data_directory)
         detected_files = {}
