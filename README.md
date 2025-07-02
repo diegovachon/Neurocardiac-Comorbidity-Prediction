@@ -1,116 +1,48 @@
 Neurocardiac Comorbidity Prediction
-Overview
-This project aims to develop an early detection system for the risk of simultaneously developing cardiovascular and neurodegenerative diseases (e.g., stroke + Alzheimer's) through analysis of blood transcriptomic profiles.
-Objectives
 
-Primary Goal: Early detection of neurocardiac comorbidity risk
-Approach: Transcriptomic signature analysis to predict combined risks
-Impact: Improve preventive patient care for at-risk individuals
+Project Overview
+
+This project develops an innovative early detection system for identifying patients at risk of developing simultaneous cardiovascular and neurodegenerative diseases through analysis of blood transcriptomic signatures. By examining gene expression patterns in peripheral blood samples, this project aims to predict the likelihood of developing conditions such as stroke combined with Alzheimer's disease, enabling preventive interventions before clinical symptoms manifest. The approach leverages the growing understanding that cardiovascular and neurodegenerative diseases share common pathological pathways, including inflammation, oxidative stress, and vascular dysfunction. These shared mechanisms leave detectable signatures in blood transcriptomes that can be captured through RNA sequencing and analyzed using machine learning techniques.
+
+Scientific Rationale
+
+Neurocardiac comorbidities represent a significant clinical challenge, as patients who develop both cardiovascular and neurodegenerative conditions face dramatically worse outcomes than those with isolated diseases. Traditional diagnostic approaches rely on clinical symptoms and imaging findings that appear relatively late in disease progression. By contrast, transcriptomic signatures can reveal molecular changes occurring years before symptom onset. My multi-label classification approach recognizes that these diseases rarely occur in isolation and that their co-occurrence is not merely coincidental but reflects shared underlying biology. This systems-level perspective allows us to develop more sophisticated risk prediction models than traditional single-disease approaches.
 
 Technical Architecture
-Processing Pipeline
 
-RNA-seq Preprocessing: Normalization, quality filtering, batch correction
-Clustering: Identification of patient groups with similar profiles
-Multi-label Classification: Simultaneous prediction of cardio + neuro risks
-Multimodal Learning: Integration with brain imaging (when available)
+Data Processing Pipeline
 
-Technologies Used
+The analysis pipeline begins with RNA sequencing data preprocessing, which includes several critical quality control steps. Raw sequencing reads undergo alignment to the human reference genome, followed by gene expression quantification and normalization to account for technical variations between samples. Batch correction algorithms remove systematic biases introduced during library preparation and sequencing, ensuring that biological signals are not confounded by technical artifacts. Patient clustering analysis identifies subgroups with similar transcriptomic profiles, revealing potential disease subtypes or stages of progression. This unsupervised learning step helps understand the heterogeneity within patient populations and can inform stratified treatment approaches. Machine Learning Framework The core prediction engine employs multi-label classification algorithms that simultaneously predict cardiovascular and neurodegenerative disease risks. Unlike traditional binary classification approaches that treat each disease independently, our multi-label framework captures the interdependencies between different pathological processes. Feature selection algorithms identify the most informative genes and pathways for prediction while avoiding overfitting in high-dimensional genomic data. These methods include both statistical approaches (such as differential expression analysis) and machine learning-based techniques (such as recursive feature elimination). Multimodal Integration When brain imaging data is available, the system integrates transcriptomic and neuroimaging information through multimodal learning approaches. This fusion leverages complementary information sources: transcriptomics reveals molecular mechanisms while neuroimaging captures structural and functional brain changes. The integration is achieved through attention mechanisms that learn optimal ways to combine information from different data modalities.
 
-Python 3.8+: Primary language
-Pandas/NumPy: Data manipulation
-Scikit-learn: Machine learning algorithms
-TensorFlow/PyTorch: Deep learning models
-Seaborn/Matplotlib: Data visualization
-Jupyter: Interactive development
-Docker: Containerization
+Technology Stack
 
-Repository Structure
-neurocardiac-comorbidity-prediction/
-├── README.md                 # This file
-├── requirements.txt          # Python dependencies
-├── data/
-│   ├── raw/                 # Original datasets (not tracked)
-│   ├── processed/           # Cleaned datasets
-│   ├── synthetic/           # Example/demo data
-│   └── README.md           # Data documentation
-├── src/
-│   ├── preprocessing/
-│   │   ├── rna_seq_pipeline.py    # RNA-seq data processing
-│   │   ├── quality_control.py     # QC metrics and filtering
-│   │   └── clustering.py          # Patient clustering
-│   ├── models/
-│   │   ├── multi_label_classifier.py  # ML classification
-│   │   ├── multimodal_fusion.py       # Image + RNA integration
-│   │   └── feature_selection.py       # Gene selection methods
-│   ├── visualization/
-│   │   ├── plots.py               # Plotting functions
-│   │   └── dashboard.py           # Interactive dashboard
-│   └── utils/
-│       ├── data_loader.py         # Data loading utilities
-│       └── evaluation.py          # Model evaluation
-├── notebooks/
-│   ├── 01_exploratory_analysis.ipynb
-│   ├── 02_preprocessing.ipynb
-│   ├── 03_model_development.ipynb
-│   └── 04_results_analysis.ipynb
-├── results/
-│   ├── figures/               # Generated plots
-│   ├── models/               # Trained model files
-│   └── reports/              # Analysis reports
-├── tests/
-│   ├── test_preprocessing.py
-│   ├── test_models.py
-│   └── test_utils.py
-└── docs/
-    ├── methodology.md        # Detailed methods
-    └── api_reference.md      # Code documentation
-Installation
-Prerequisites
+Installation Prerequisites
 
-Python 3.8 or higher
-Git
-(Optional) Conda for environment management
+Python 3.8 or higher Git (Optional) Conda for environment management
 
 Setup Instructions
 
 Clone the repository
 
-bashgit clone https://github.com/yourusername/neurocardiac-comorbidity-prediction.git
-cd neurocardiac-comorbidity-prediction
+bashgit clone https://github.com/yourusername/neurocardiac-comorbidity-prediction.git cd neurocardiac-comorbidity-prediction
 
 Create virtual environment
 
 bash
-# Using conda (recommended)
-conda env create -f environment.yml
-conda activate neurocardiac-pred
 
-# Or using pip
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+Using conda (recommended)
+conda env create -f environment.yml conda activate neurocardiac-pred
 
-Download sample data (if available)
+Or using pip
+python -m venv venv source venv/bin/activate # On Windows: venv\Scripts\activate pip install -r requirements.txt
+
+Download sample data
 
 bash
-# Follow instructions in data/README.md
 
-Data Requirements
-Input Data Format
+Follow instructions in data/README.md
+Data Requirements Input Data Format
 
-RNA-seq data: Gene expression matrix (genes × samples)
-Clinical labels: Multi-label format (cardiovascular, neurological)
-Optional: Brain imaging data for multimodal approach
-
-Data Privacy Notice
-Important: This repository does not contain any real patient data. All examples use synthetic or publicly available datasets. Always ensure compliance with data protection regulations (HIPAA, GDPR) when working with medical data.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Contact
+RNA-seq data: Gene expression matrix (genes × samples) Clinical labels: Multi-label format (cardiovascular, neurological) Optional: Brain imaging data for multimodal approach
 
 Author: Diego Vachon Galindo
-Email: diego.vachongalindo@mail.mcgill.ca
-GitHub: @diegovachon
